@@ -7,7 +7,10 @@ class Home extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {users : []};
+    this.state = {
+                  users : [],
+                  search:''
+    };
 
     this.getTheList = this.getTheList.bind(this);
   }
@@ -17,7 +20,10 @@ class Home extends Component {
       fetch(`https://api.github.com/search/users?q=${name}`).then(function(response) {
             return response.json();
           }).then(function(response) {
-              self.setState({users: response.items});
+              self.setState({
+                  users: response.items,
+                  search:name
+              });
            return response.items;
           });
   }
@@ -33,7 +39,8 @@ class Home extends Component {
                 <NameForm handleSubmit ={this.getTheList}/>
         </div>
         <div className="app-content-wrapper">
-            <ListUsers usersList = {this.state.users}/>
+            <ListUsers usersList = {this.state.users}
+                       search = {this.state.search}/>
         </div>
 
       </div>

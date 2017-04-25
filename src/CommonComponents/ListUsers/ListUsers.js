@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function ListUsers ({usersList}) {
+
+
+export default function ListUsers ({usersList, search}) {
     return (
         <div>
           <ul >
-              {usersList.map((item, index) => <li key={index}>
+
+              {usersList.length === 0 && search.length ?<li> Not found</li> : usersList.map((item, index) => <li key={index}>
 
                     <div className="content">
                       <img src={item.avatar_url} width='102' height='102' />
