@@ -27,15 +27,14 @@ class Home extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Welcome to My app</h2>
+          <h2>Search now</h2>
         </div>
-        <div className="app-content-wrapper" >
-        <NameForm
-                handleSubmit ={this.getTheList}/>
+        <div className="app-search-wrapper" >
+                <NameForm handleSubmit ={this.getTheList}/>
         </div>
-        <ListUsers
-           usersList = {this.state.users}
-        />
+        <div className="app-content-wrapper">
+            <ListUsers usersList = {this.state.users}/>
+        </div>
 
       </div>
     );
