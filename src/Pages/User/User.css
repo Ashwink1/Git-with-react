@@ -1,0 +1,13 @@
+.user-info-wrapper{
+    display: flex;
+}
+
+.user-wrapper{
+    padding-left: 20px;
+}
+
+.user-wrapper-text{
+    font-size: 14px;
+    padding-bottom: 5px;
+    color: #825b5b;
+}

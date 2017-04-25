@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './User.css';
 
 export default class User extends Component {
 
@@ -28,14 +29,16 @@ export default class User extends Component {
 
   render() {
     return (
-        <div>
+        <div className="user-info-wrapper">
             <img src={this.state.user.avatar_url} width='102' height='102' />
-            <div>Name :  {this.state.user.name} </div>
-            <div>Login :  {this.state.user.login} </div>
-            <div>blog :  {this.state.user.blog} </div>
-            <div>followers :  {this.state.user.followers} </div>
-            <div>location :  {this.state.user.location} </div>
-            <div>public_repos :  {this.state.user.public_repos} </div>
+           <div className="user-wrapper">
+               <div className="user-wrapper-text">Name :  {this.state.user.name} </div>
+               <div className="user-wrapper-text">Login :  {this.state.user.login} </div>
+               <div className="user-wrapper-text">blog :  {this.state.user.blog} </div>
+               <div className="user-wrapper-text">followers :  {this.state.user.followers} </div>
+               <div className="user-wrapper-text">location :  {this.state.user.location} </div>
+               <div className="user-wrapper-text">public_repos :  {this.state.user.public_repos} </div>
+           </div>
         </div>
     );
   }
