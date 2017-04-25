@@ -13,13 +13,11 @@ class Home extends Component {
   }
 
   getTheList(name){
-    let self = this;
+    const self = this;
       fetch(`https://api.github.com/search/users?q=${name}`).then(function(response) {
             return response.json();
           }).then(function(response) {
-              self.setState({users: response.items},()=>{
-                          console.log(self.state);
-                        });
+              self.setState({users: response.items});
            return response.items;
           });
   }

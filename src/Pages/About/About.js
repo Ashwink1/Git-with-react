@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class User extends Component {
+export default class About extends Component {
 
   constructor(props) {
     super(props);
@@ -9,7 +9,7 @@ export default class User extends Component {
   
     return (
         <div>
-             About
+             This is a git searching application where you can search for the users and get info about the user.
         </div>
     );
   }
